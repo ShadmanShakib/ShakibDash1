@@ -3,7 +3,7 @@ import { Box, Image, Input } from "@chakra-ui/react";
 import { ReactComponent as Google } from "../../../icons/Google.svg";
 import "./LogInCard.module.css";
 import { NuxButton } from "../../buttons";
-import { NormalText } from "../../Text";
+import { LinkText, NormalText } from "../../Text";
 function LogInCard() {
   return (
     <Box display="flex" justifyContent="center" pt="80px" bg="#f6f8f9">
@@ -71,7 +71,6 @@ function LogInCard() {
         </Box>
         <Box>
           <NormalText text="Password" />
-
           <Input
             height=" 36px"
             py="4px"
@@ -85,6 +84,7 @@ function LogInCard() {
 
         <NuxButton />
         <NormalText text="Don't have an account?" />
+        <LinkText text="Sign up" />
       </Box>
     </Box>
   );
