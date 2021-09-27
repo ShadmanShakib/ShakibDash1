@@ -1,10 +1,10 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-
+import { LogInCard } from "../../components/ui/cards";
 function LogIn() {
   return (
-    <Box bg="black">
-      <Box>This what I'm talking about</Box>
+    <Box>
+      <LogInCard />
     </Box>
   );
 }
