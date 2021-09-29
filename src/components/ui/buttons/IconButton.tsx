@@ -3,11 +3,13 @@ import { Box } from "@chakra-ui/react";
 interface Props {
   icon: any;
   title: string;
+  handleClick?: () => void;
 }
 function IconButton(props: Props) {
-  const { icon, title } = props;
+  const { icon, title, handleClick } = props;
   return (
     <Box
+      onClick={handleClick}
       mb="8"
       w="100%"
       bg="white"

@@ -1,9 +1,13 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-
-function NuxButton() {
+interface INuxButton {
+  handleClick?: () => void;
+}
+function NuxButton(props: INuxButton) {
+  const { handleClick } = props;
   return (
     <Box
+      onClick={handleClick}
       role="button"
       fontSize="14px"
       height="36px"
