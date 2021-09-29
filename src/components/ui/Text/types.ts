@@ -1,5 +1,6 @@
 export interface IText {
   text: string;
+  underline?: boolean;
 }
 
 export interface ILink {
