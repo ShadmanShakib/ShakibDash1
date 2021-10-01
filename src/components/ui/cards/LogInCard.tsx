@@ -1,10 +1,14 @@
 import React from "react";
 import { Box, Image, Input } from "@chakra-ui/react";
-import { ReactComponent as Google } from "../../../icons/Google.svg";
-import "./LogInCard.module.css";
-import { NuxButton, IconButton } from "../../buttons";
-import { LinkText, NormalText } from "../../Text";
-function LogInCard() {
+import { ReactComponent as Google } from "../../icons/Google.svg";
+
+import { NuxButton, IconButton } from "../buttons";
+import { LinkText, NormalText } from "../Text";
+
+interface ILogInCard {
+  onClick?: () => void;
+}
+function LogInCard(props: ILogInCard) {
   return (
     <Box display="flex" justifyContent="center" py="80px" bg="#f6f8f9">
       <Box
