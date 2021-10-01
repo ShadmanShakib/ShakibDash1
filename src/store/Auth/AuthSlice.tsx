@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { RootState } from "../store";
 
 interface IAuth {
   authenticated: boolean;
@@ -6,8 +7,8 @@ interface IAuth {
 const initialState: IAuth = {
   authenticated: false,
 };
-const AuthReducer = createSlice({
-  name: "Auth",
+const slice = createSlice({
+  name: "auth",
   initialState,
   reducers: {
     setAuthenticated: (state) => {
@@ -16,5 +17,7 @@ const AuthReducer = createSlice({
   },
 });
 
-export const { setAuthenticated } = AuthReducer.actions;
-export default AuthReducer.reducer;
+export const { setAuthenticated } = slice.actions;
+export const selectAuthenticated = (state: RootState) =>
+  state.auth.authenticated;
+export default slice.reducer;
