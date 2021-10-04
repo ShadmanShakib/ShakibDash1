@@ -61,7 +61,7 @@ function LogInCard(props: ILogInCard) {
           <NormalText underline={true} text="Forgot your password?" />
         </Box>
 
-        <NuxButton />
+        <NuxButton onClick={props.onClick} />
         <Box display="flex" my="8" justifyContent="center">
           <NormalText text="Don't have an account?" />
 
