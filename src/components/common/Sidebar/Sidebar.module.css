@@ -1,0 +1,26 @@
+.SidebarCollapsibleHeader {
+  color: #6f7782;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  align-items: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  display: flex;
+  height: 40px;
+  padding: 0 24px 0 24px;
+  width: 100%;
+}
+.Sidebar:hover {
+  opacity: 1;
+}
+.MiniIcon {
+  height: 12px;
+  width: 12px;
+  fill: #fff;
+}
+button {
+  background-color: transparent;
+  border: 0;
+}

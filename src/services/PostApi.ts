@@ -8,7 +8,7 @@ interface Post {
 
 // Define a service using a base URL and expected endpoints
 export const postApi = createApi({
-  reducerPath: "pokemonApi",
+  reducerPath: "postApi",
   baseQuery: fetchBaseQuery({
     baseUrl: "https://jsonplaceholder.typicode.com/",
   }),
