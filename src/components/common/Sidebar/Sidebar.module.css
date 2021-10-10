@@ -1,3 +1,7 @@
+.Typography {
+  font-size: 14px;
+  line-height: 22px;
+}
 .SidebarCollapsibleHeader {
   color: #6f7782;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -23,4 +27,70 @@
 button {
   background-color: transparent;
   border: 0;
+}
+.SidebarInvite {
+  align-items: center;
+  box-sizing: border-box;
+  color: #f6f8f9;
+  cursor: pointer;
+  display: flex;
+  height: 56px;
+  border-top: 1px solid #273240;
+}
+
+.SidebarInvite_button {
+  align-items: center;
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.SidebarInvite_contentContainer {
+  align-items: center;
+  display: flex;
+  height: 32px;
+  padding-right: 4px;
+}
+.SidebarInvite_buttonImage {
+  height: 24px;
+  margin-left: 24px;
+  width: 24px;
+}
+.SidebarInvite_buttonText {
+  padding-left: 8px;
+}
+.Sidebar_learningHubButtonContainer {
+  align-items: center;
+  border-top: 1px solid var(--color-sidebar-border);
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  text-align: center;
+}
+.SidebarLearningHubButton {
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  justify-content: left;
+  text-align: center;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 12px;
+  cursor: pointer;
+  align-items: center;
+}
+.SidebarLearningHubButton_icon {
+  align-items: center;
+  background-color: #796eff;
+  border-radius: 50%;
+  display: flex;
+  fill: #fff;
+  height: 24px;
+  justify-content: center;
+  margin-left: 12px;
+  margin-right: 8px;
+  width: 24px;
 }
