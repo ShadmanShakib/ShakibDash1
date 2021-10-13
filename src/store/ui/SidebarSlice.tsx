@@ -4,11 +4,13 @@ import { RootState } from "../store";
 interface ISidebarState {
   expanded: boolean;
   openFavorite: boolean;
+  isServices: boolean;
 }
 
 const initialState: ISidebarState = {
   expanded: true,
   openFavorite: true,
+  isServices: false,
 };
 
 const slice = createSlice({

@@ -16,7 +16,7 @@ function MenuItem(props: Props) {
     >
       <Box mr="8px">{props.icon}</Box>
 
-      <p style={{ color: "#cbd4db", fontWeight: 400, fontSize: 10 }}>
+      <p style={{ color: "#cbd4db", fontWeight: 400, fontSize: 14 }}>
         {props.text}
       </p>
     </Box>
