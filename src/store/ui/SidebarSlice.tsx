@@ -1,16 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import { RootState } from "../store";
 
 interface ISidebarState {
   expanded: boolean;
-  openFavorite: boolean;
-  isServices: boolean;
+  isFavorite: boolean;
+  isSearches: boolean;
 }
 
 const initialState: ISidebarState = {
   expanded: true,
-  openFavorite: true,
-  isServices: false,
+  isFavorite: false,
+  isSearches: false,
 };
 
 const slice = createSlice({
@@ -20,9 +21,15 @@ const slice = createSlice({
     toggleSidebar: (state) => {
       state.expanded = !state.expanded;
     },
+    toggleFavorite: (state) => {
+      state.isFavorite = !state.isFavorite;
+    },
+    toggleSearches: (state) => {
+      state.isSearches = !state.isSearches;
+    },
   },
 });
 
-export const { toggleSidebar } = slice.actions;
+export const { toggleSidebar, toggleFavorite, toggleSearches } = slice.actions;
 export const selectSidebar = (state: RootState) => state.Sidebar;
 export default slice.reducer;

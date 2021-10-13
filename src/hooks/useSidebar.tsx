@@ -1,8 +1,10 @@
 import { useMemo } from "react";
-import { useSelector, useDispatch } from "react-redux";
 import { selectSidebar } from "../store/ui/SidebarSlice";
-import { RootState, AppDispatch } from "../store/store";
+import { useAppDispatch, useAppSelector } from "./useApp";
+
 export default function useSidebar() {
-  const { expanded, openFavorite } = useSelector(selectSidebar);
-  return useMemo(() => ({ expanded, openFavorite }), [expanded, openFavorite]);
+  const { expanded, isFavorite } = useAppSelector(selectSidebar);
+  const dispatch = useAppDispatch();
+
+  return useMemo(() => ({ expanded, isFavorite }), [expanded, isFavorite]);
 }
