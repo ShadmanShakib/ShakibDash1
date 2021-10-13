@@ -8,6 +8,8 @@ import {
   BaseButton,
   SidebarLearningHubButton,
   SidebarWorkSpace,
+  ExtendedFavorites,
+  ExtendedSearches,
 } from ".";
 import Menu from "./Menu";
 import { useAppDispatch, useAppSelector } from "../../../hooks";
@@ -53,11 +55,13 @@ function Sidebar() {
               <SidebarCollapsableHeader
                 onClick={ToggleFavorite}
                 isCollapsed={isFavorite}
+                children={<ExtendedFavorites />}
                 title="Favorites"
               />
               <SidebarCollapsableHeader
                 isCollapsed={isSearches}
                 onClick={ToggleSearches}
+                children={<ExtendedSearches />}
                 title="Saved searches"
               />
               <SidebarWorkSpace />
