@@ -1,11 +1,15 @@
 import React from "react";
-import { Sidebar } from "../../components/common";
+import { Box } from "@chakra-ui/react";
+import { Sidebar, Topbar } from "../../components/common";
 
 function Dashboard() {
   return (
-    <div>
+    <Box display="flex">
       <Sidebar />
-    </div>
+      <Box w="100%">
+        <Topbar />
+      </Box>
+    </Box>
   );
 }
 

@@ -35,7 +35,10 @@ function Sidebar() {
     dispatch(toggleSearches());
   };
   return (
-    <Box visibility={expanded ? "visible" : "hidden"}>
+    <Box
+      w={expanded ? "240px" : "0"}
+      visibility={expanded ? "visible" : "hidden"}
+    >
       <Box
         w="240px"
         display="flex"
