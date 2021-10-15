@@ -27,6 +27,15 @@ function Topbar() {
             role="button"
             aria-label="Expand sidebar"
             tabIndex={0}
+            h="36px"
+            w="36px"
+            borderRadius="6px"
+            alignItems="center"
+            display="inline-flex"
+            justifyContent="center"
+            border="1px solid"
+            borderColor="transparent"
+            cursor="pointer"
           >
             <svg
               fill="#6f7782"

@@ -13,6 +13,7 @@ function MenuItem(props: Props) {
       px="24px"
       h="32px"
       lineHeight="32px"
+      _hover={{ bgColor: "rgba(255,255,255,.2)" }}
     >
       <Box mr="8px">{props.icon}</Box>
 
