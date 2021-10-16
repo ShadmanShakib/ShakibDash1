@@ -1,6 +1,8 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
+import dayjs from "dayjs";
 function Greeting() {
+  const date = dayjs().date();
   return (
     <>
       <Text
@@ -14,7 +16,7 @@ function Greeting() {
         color="white"
         fontSize="16px"
       >
-        Friday, October&nbsp;15
+        Friday, October&nbsp;{date}
       </Text>
       <Text
         fontSize="32px"
