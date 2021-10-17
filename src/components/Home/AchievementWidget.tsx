@@ -6,11 +6,16 @@ function AchievementWidget() {
       display="grid"
       mb="12px"
       mt="16px"
-      gridColumnStart={1}
-      gridRowStart={1}
-      justifySelf="center"
+      justifyItems="end"
+      alignItems="stretch"
+      height="48px"
     >
-      <Box className="AchievementsWidget HomePageContent-achievements">
+      <Box
+        display="block"
+        gridColumnStart={1}
+        gridRowStart={1}
+        justifySelf="center"
+      >
         <Box
           h="48px"
           alignItems="center"
@@ -22,18 +27,18 @@ function AchievementWidget() {
           <Box mx="16px">
             <Box
               fontSize="12px"
-              height="28px"
+              height="48px"
               fontWeight={500}
               role="button"
               aria-expanded="false"
               tabIndex={0}
-              px="8px"
+              pr="8px"
               cursor="pointer"
-              dis="inline-flex"
-              alignContent="center"
-              justifyContent="center"
+              display="inline-flex"
+              alignItems="center"
               transitionDuration=".2s"
               borderRadius="6px"
+              justifyContent="center"
             >
               <Text color="white">My week</Text>
               <svg
@@ -49,8 +54,13 @@ function AchievementWidget() {
           </Box>
           <Box borderRight="1px solid" height="24px"></Box>
           <Box mr="16px">
-            <Box className="AchievementsWidgetStatistic">
-              <Box className="AchievementsWidgetStatistic-numberSection--smallNumber AchievementsWidgetStatistic-numberSection">
+            <Box display="flex" alignItems="center">
+              <Box
+                display="flex"
+                justifyContent="flex-end"
+                alignItems="center"
+                w="72px"
+              >
                 <svg
                   height="16px"
                   width="16px"
@@ -60,51 +70,107 @@ function AchievementWidget() {
                 >
                   <path d="M10.9,26.2c-0.5,0-1-0.2-1.4-0.6l-6.9-6.9c-0.8-0.8-0.8-2,0-2.8s2-0.8,2.8,0l5.4,5.4l16-15.9c0.8-0.8,2-0.8,2.8,0s0.8,2,0,2.8L12.3,25.6C11.9,26,11.4,26.2,10.9,26.2z"></path>
                 </svg>
-                <Box mx="4px" aria-label="1">
+                <Box display="block" mx="4px" aria-label="1">
                   <Box aria-hidden="true">
-                    <Box className="NumberTicker-row NumberTicker-row--h4">
-                      <Box className="NumberTicker-column NumberTicker-column--1">
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
-                          &nbsp;
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                    <Box h="28px" overflowY="hidden">
+                      <Box
+                        transform="translateY(-18.181818181818%)"
+                        display="inline-block"
+                        width="fit-content"
+                        transitionProperty="transform"
+                        transitionDuration="0.5s"
+                        transitionTimingFunction="ease-in-out"
+                        transition-delay="0s"
+                      >
+                        <Text fontSize="20px">&nbsp;</Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           0
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           1
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           2
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           3
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           4
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           5
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           6
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           7
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           8
-                        </h4>
-                        <h4 className="NumberTicker-number AchievementsWidgetStatistic-numberTicker--lightAccents Typography Typography--colorDarkGray2 Typography--h4 Typography--fontWeightMedium">
+                        </Text>
+                        <Text
+                          fontWight={500}
+                          color="white"
+                          fontSize="20px"
+                          lineHight="28px"
+                        >
                           9
-                        </h4>
+                        </Text>
                       </Box>
                     </Box>
                   </Box>
                 </Box>
               </Box>
-              <span className="AchievementsWidgetStatistic-text Typography Typography--s">
+              <Text fontSize="12px" color="white">
                 task completed
-              </span>
+              </Text>
             </Box>
           </Box>
         </Box>
@@ -123,6 +189,10 @@ function AchievementWidget() {
         borderRadius="6px"
         justifyContent="center"
         color="white"
+        gridColumnStart={1}
+        gridRowStart={1}
+        flexShrink={0}
+        position="relative"
       >
         <svg
           height="16px"
