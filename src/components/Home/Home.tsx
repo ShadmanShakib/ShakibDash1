@@ -2,6 +2,7 @@ import React from "react";
 import { Box } from "@chakra-ui/react";
 import { Topbar } from "../common/Topbar";
 import { Greeting, AchievementWidget, BaseCard } from "./index";
+import ProjectWidget from "./ProjectWidget";
 function Home() {
   return (
     <Box
@@ -34,6 +35,7 @@ function Home() {
             <Greeting />
             <AchievementWidget />
             <BaseCard />
+            <ProjectWidget />
           </Box>
         </Box>
       </Box>

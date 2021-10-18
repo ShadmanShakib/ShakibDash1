@@ -1,7 +1,138 @@
 import React from "react";
-
+import { Box, Text, HStack } from "@chakra-ui/react";
 function ProjectWidget() {
-  return <div></div>;
+  return (
+    <Box
+      mb="16px"
+      h="auto"
+      bg="White"
+      borderRadius="8px"
+      position="relative"
+      border="1px solid #edeae9"
+    >
+      <Box
+        display="flex"
+        flexDirection="column"
+        maxH="400px"
+        mb="16px"
+        h="100%"
+      >
+        {/* Project widget header */}
+        <Box
+          display="flex"
+          alignItems="center"
+          justifyContent="space-between"
+          px="24px"
+          pt="24px"
+          h="28px"
+        >
+          <Box display="flex" alignItems="baseline">
+            <Text fontSize="20px" lineHeight="28px" pr="8px" fontWeight="500">
+              Projects
+            </Text>
+            <Box
+              display="inline-flex"
+              alignItems="center"
+              justifyContent="center"
+              boxSizing="border-box"
+              borderRadius="6px"
+              px="8px"
+              flexShrink={1}
+              role="button"
+              aria-expanded="false"
+              tabindex={0}
+            >
+              <Text
+                fontSize="12px"
+                lineHeight="28px"
+                cursor="pointer"
+                fontWeight="500"
+                color="#6d6e6f"
+              >
+                Recently visited
+              </Text>
+              <svg
+                style={{ marginLeft: "4px" }}
+                fill="#6d6e6f"
+                height="12px"
+                width="12px"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path d="M3.5,8.9c0-0.4,0.1-0.7,0.4-1C4.5,7.3,5.4,7.2,6,7.8l5.8,5.2l6.1-5.2C18.5,7.3,19.5,7.3,20,8c0.6,0.6,0.5,1.5-0.1,2.1 l-7.1,6.1c-0.6,0.5-1.4,0.5-2,0L4,10.1C3.6,9.8,3.5,9.4,3.5,8.9z"></path>
+              </svg>
+            </Box>
+          </Box>
+        </Box>
+        {/* Project header ends */}
+        {/* ProjectWidget Contents */}
+        <Box overflowY="auto" pt="12px" px="24px" display="block" pb="8px">
+          <Box
+            display="grid"
+            gridTemplateColumns="repeat (3,minmax(240px, 1fr))"
+            mb="12px"
+            gridRowGap="8px"
+          >
+            {/* Project Card */}
+            <Box
+              height="64px"
+              cursor="pointer"
+              bg="transparent"
+              color="#1e1f21"
+            >
+              <Box className="ItemRow ItemRow--enabled RowStructure">
+                <Box
+                  height="59px"
+                  borderRadius="8px"
+                  display="flex"
+                  alignItems="center"
+                  border="1px solid transparent"
+                  position="relative"
+                  justifyContent="space-between"
+                >
+                  <Box className="RowStructure-leftGutter"></Box>
+                  <Box className="RowStructure-leftChildren">
+                    <HStack>
+                      <svg
+                        height="48px"
+                        width="48px"
+                        focusable="false"
+                        viewBox="0 0 48 48"
+                        cursor="pointer"
+                        fill="white"
+                      >
+                        <path
+                          d="M35.5,47.5h-23c-6.6,0-12-5.4-12-12v-23c0-6.6,5.4-12,12-12h23c6.6,0,12,5.4,12,12v23 C47.5,42.1,42.1,47.5,35.5,47.5z"
+                          strokeDasharray="3.0432,2.0288"
+                          stroke="#6d6e6f"
+                          fill="transparant"
+                        ></path>
+                        <path
+                          d="M32,24c0,0.6-0.4,1-1,1h-6v6c0,0.6-0.4,1-1,1s-1-0.4-1-1v-6h-6c-0.6,0-1-0.4-1-1c0-0.6,0.4-1,1-1h6v-6c0-0.6,0.4-1,1-1 s1,0.4,1,1v6h6C31.6,23,32,23.4,32,24z"
+                          fill="#6d6e6f"
+                        ></path>
+                      </svg>
+                      <Box className="MultilineRowMetadataStructure-rightChildren">
+                        <Box className="MultilineRowMetadataStructure-title">
+                          <h6 className="ProjectsWidgetItemList-createNewProjectText Typography Typography--colorDarkGray1 Typography--h6 Typography--fontWeightMedium">
+                            New&nbsp;Project
+                          </h6>
+                        </Box>
+                      </Box>
+                    </HStack>
+                  </Box>
+                </Box>
+                <Box className="ItemRowTwoColumnStructure-right">
+                  <Box className="RowStructure-rightChildren"></Box>
+                  <Box className="RowStructure-rightGutter"></Box>
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
+    </Box>
+  );
 }
 
 export default ProjectWidget;
