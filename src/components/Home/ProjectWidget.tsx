@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, HStack } from "@chakra-ui/react";
+import { Box, HStack } from "@chakra-ui/react";
 import ProjectWidgetHeader from "./ProjectWidgetHeader";
 function ProjectWidget() {
   return (
