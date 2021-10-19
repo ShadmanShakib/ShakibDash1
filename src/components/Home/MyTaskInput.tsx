@@ -1,13 +1,15 @@
 import { Box, Input } from "@chakra-ui/react";
-import React from "react";
+import React, { KeyboardEvent } from "react";
 import { useForm } from "react-hook-form";
 import { useAppDispatch } from "../../hooks";
 
 import { addTask } from "../../store/Project/TaskSlice";
 
 export default function MyTaskInput() {
+  const { register } = useForm();
   const dispatch = useAppDispatch();
-  const handleAddTask = (e: any) => {
+
+  const handleAddTask = (e: KeyboardEvent) => {
     if (e.code === "Enter") {
       e.preventDefault();
       alert(e.code);
