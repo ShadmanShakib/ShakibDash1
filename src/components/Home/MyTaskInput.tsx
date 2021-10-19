@@ -1,7 +1,18 @@
 import { Box, Input } from "@chakra-ui/react";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { useAppDispatch } from "../../hooks";
+
+import { addTask } from "../../store/Project/TaskSlice";
 
 export default function MyTaskInput() {
+  const dispatch = useAppDispatch();
+  const handleAddTask = (e: any) => {
+    if (e.code === "Enter") {
+      e.preventDefault();
+      alert(e.code);
+    }
+  };
   return (
     <Box
       pt="16px"
@@ -35,6 +46,7 @@ export default function MyTaskInput() {
           lineHeight="36px"
           bgColor="transparent"
           placeholder="Don’t forget it. Task it!"
+          onKeyUp={(e) => handleAddTask(e)}
         />
       </Box>
     </Box>

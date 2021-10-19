@@ -1,6 +1,9 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
+import { useAppSelector } from "../../hooks";
 function AchievementWidget() {
+  const Tasks = useAppSelector((state) => state.Tasks);
+  const TranslateY = Number(-9.090909090909 + -9.090909090909 * Tasks.length);
   return (
     <Box
       display="grid"
@@ -74,7 +77,7 @@ function AchievementWidget() {
                   <Box aria-hidden="true">
                     <Box h="28px" overflowY="hidden">
                       <Box
-                        transform="translateY(-18.181818181818%)"
+                        transform={`translateY(${TranslateY}%)`}
                         display="inline-block"
                         width="fit-content"
                         transitionProperty="transform"
