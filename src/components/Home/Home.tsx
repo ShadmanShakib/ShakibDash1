@@ -3,6 +3,7 @@ import { Box } from "@chakra-ui/react";
 import { Topbar } from "../common/Topbar";
 import { Greeting, AchievementWidget, BaseCard, PeopleWidget } from "./index";
 import ProjectWidget from "./ProjectWidget";
+
 function Home() {
   return (
     <Box
@@ -13,8 +14,11 @@ function Home() {
       flexShrink={1}
       justifyContent="center"
       position="relative"
+      flexBasis="0%"
+      flexDirection="column"
+      minW="920px"
     >
-      <Box w="100%" overflowY="auto">
+      <Box w="100%">
         <Topbar />
         <Box
           display="flex"
@@ -31,6 +35,7 @@ function Home() {
             overflow="hidden"
             maxW="1200px"
             alignItems="stretch"
+            pt="72px"
           >
             <Greeting />
             <AchievementWidget />

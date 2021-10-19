@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 function AchievementWidget() {
   return (
     <Box
@@ -28,7 +28,7 @@ function AchievementWidget() {
             <Box
               fontSize="12px"
               height="48px"
-              fontWeight={500}
+              fontWeight="500"
               role="button"
               aria-expanded="false"
               tabIndex={0}
@@ -40,7 +40,7 @@ function AchievementWidget() {
               borderRadius="6px"
               justifyContent="center"
             >
-              <Text color="white">My week</Text>
+              <Box color="white">My week</Box>
               <svg
                 height="12px"
                 width="12px"
@@ -82,95 +82,95 @@ function AchievementWidget() {
                         transitionTimingFunction="ease-in-out"
                         transition-delay="0s"
                       >
-                        <Text fontSize="20px">&nbsp;</Text>
-                        <Text
-                          fontWight={500}
+                        <Box fontSize="20px">&nbsp;</Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           0
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           1
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           2
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           3
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           4
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           5
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           6
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth={500}
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           7
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           8
-                        </Text>
-                        <Text
-                          fontWight={500}
+                        </Box>
+                        <Box
+                          fontwidth="500"
                           color="white"
                           fontSize="20px"
-                          lineHight="28px"
+                          linehight="28px"
                         >
                           9
-                        </Text>
+                        </Box>
                       </Box>
                     </Box>
                   </Box>
                 </Box>
               </Box>
-              <Text fontSize="12px" color="white">
+              <Box fontSize="12px" color="white">
                 task completed
-              </Text>
+              </Box>
             </Box>
           </Box>
         </Box>

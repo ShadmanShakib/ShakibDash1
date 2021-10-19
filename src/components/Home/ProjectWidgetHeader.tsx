@@ -25,7 +25,7 @@ function ProjectWidgetHeader() {
           flexShrink={1}
           role="button"
           aria-expanded="false"
-          tabindex={0}
+          tabIndex={0}
         >
           <Text
             fontSize="12px"

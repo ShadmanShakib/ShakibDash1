@@ -38,42 +38,37 @@ function Sidebar() {
     <Box
       w={expanded ? "240px" : "0"}
       visibility={expanded ? "visible" : "hidden"}
+      display="flex"
+      flexDir="column"
+      bg="#151b26"
+      flexBasis="auto"
+      flexShrink={0}
+      flexGrow={0}
     >
-      <Box
-        w="240px"
-        display="flex"
-        flexDir="column"
-        bg="#151b26"
-        flexBasis="auto"
-        flexShrink={1}
-        flexGrow={1}
-        minH="100vh"
-      >
-        <SibebarHeader onClick={handleClick} />
-        <Menu />
+      <SibebarHeader onClick={handleClick} />
+      <Menu />
 
-        <Box className={cn(s.CustomScrollbarScrollable)}>
-          <Box className={cn(s.Scrollable_vertical)}>
-            <Box className={cn(s.SidebarCollapsableSection)}>
-              <SidebarCollapsableHeader
-                onClick={ToggleFavorite}
-                isCollapsed={isFavorite}
-                children={<ExtendedFavorites />}
-                title="Favorites"
-              />
-              <SidebarCollapsableHeader
-                isCollapsed={isSearches}
-                onClick={ToggleSearches}
-                children={<ExtendedSearches />}
-                title="Saved searches"
-              />
-              <SidebarWorkSpace />
-            </Box>
+      <Box className={cn(s.CustomScrollbarScrollable)}>
+        <Box className={cn(s.Scrollable_vertical)}>
+          <Box className={cn(s.SidebarCollapsableSection)}>
+            <SidebarCollapsableHeader
+              onClick={ToggleFavorite}
+              isCollapsed={isFavorite}
+              children={<ExtendedFavorites />}
+              title="Favorites"
+            />
+            <SidebarCollapsableHeader
+              isCollapsed={isSearches}
+              onClick={ToggleSearches}
+              children={<ExtendedSearches />}
+              title="Saved searches"
+            />
+            <SidebarWorkSpace />
           </Box>
         </Box>
-        <BaseButton />
-        <SidebarLearningHubButton />
       </Box>
+      <BaseButton />
+      <SidebarLearningHubButton />
     </Box>
   );
 }
