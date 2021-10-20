@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Text, HStack } from "@chakra-ui/react";
 import TabNavItem from "./TabNavItem";
 import MyTaskInput from "./MyTaskInput";
+import { MyTaskList } from ".";
 export default function BaseCard() {
   return (
     <Box
@@ -58,6 +59,7 @@ export default function BaseCard() {
         </Box>
         {/* Mytask input */}
         <MyTaskInput />
+        <MyTaskList />
       </Box>
     </Box>
   );

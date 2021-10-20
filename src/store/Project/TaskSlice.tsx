@@ -1,5 +1,5 @@
-import { createSlice } from "@reduxjs/toolkit";
-
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { v4 as uuid } from "uuid";
 interface ITask {
   id: string;
   body: string;
@@ -17,8 +17,8 @@ const slice = createSlice({
   name: "Tasks",
   initialState,
   reducers: {
-    addTask: (state) => {
-      state.push({ id: "hhfh", body: "Task 2", completed: false });
+    addTask: (state, action: PayloadAction<string>) => {
+      state.push({ id: uuid(), body: action.payload, completed: false });
     },
   },
 });

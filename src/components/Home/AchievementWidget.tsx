@@ -3,7 +3,10 @@ import { Box } from "@chakra-ui/react";
 import { useAppSelector } from "../../hooks";
 function AchievementWidget() {
   const Tasks = useAppSelector((state) => state.Tasks);
-  const TranslateY = Number(-9.090909090909 + -9.090909090909 * Tasks.length);
+  const completedTask = Tasks.filter((task) => task.completed === true);
+  const TranslateY = Number(
+    -9.090909090909 + -9.090909090909 * completedTask.length
+  );
   return (
     <Box
       display="grid"
