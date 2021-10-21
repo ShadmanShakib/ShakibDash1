@@ -32,14 +32,9 @@ function MyTaskList() {
                 flexGrow={1}
                 flexShrink={1000}
                 h="100%"
+                px="24px"
               >
-                <Box
-                  height="16px"
-                  w="16px"
-                  display="inline-flex"
-                  mr="8px"
-                  cursor="pointer"
-                >
+                <Box display="inline-flex" mr="8px" cursor="pointer">
                   <svg
                     height="16px"
                     width="16px"
