@@ -1,8 +1,10 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import { useAppSelector } from "../../hooks";
+import { useAppSelector, useAppDispatch } from "../../hooks";
+import { taskCompleted } from "../../store/Project/TaskSlice";
 function MyTaskList() {
   const Tasks = useAppSelector((state) => state.Tasks);
+  const dispatch = useAppDispatch();
   return (
     <Box
       flexGrow={1}
@@ -37,6 +39,7 @@ function MyTaskList() {
               >
                 <Box display="inline-flex" mr="8px" cursor="pointer">
                   <svg
+                    onClick={() => dispatch(taskCompleted(task.id))}
                     height="16px"
                     width="16px"
                     focusable="false"

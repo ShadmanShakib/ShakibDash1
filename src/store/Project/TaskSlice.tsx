@@ -20,8 +20,12 @@ const slice = createSlice({
     addTask: (state, action: PayloadAction<string>) => {
       state.push({ id: uuid(), body: action.payload, completed: false });
     },
+    taskCompleted: (state, action: PayloadAction<string>) => {
+      const selected = state.find((task) => task.id === action.payload);
+      if (selected) selected.completed = true;
+    },
   },
 });
 
-export const { addTask } = slice.actions;
+export const { addTask, taskCompleted } = slice.actions;
 export default slice.reducer;
