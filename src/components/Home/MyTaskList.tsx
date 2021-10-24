@@ -22,8 +22,10 @@ function MyTaskList() {
               alignItems="center"
               position="relative"
               borderTop="1px solid transparant"
-              borderBottom="1px solid "
+              borderBottom="1px solid"
+              borderColor="gray.300"
               key={task.id}
+              mx="24px"
             >
               <Box
                 display="flex"
@@ -32,7 +34,6 @@ function MyTaskList() {
                 flexGrow={1}
                 flexShrink={1000}
                 h="100%"
-                px="24px"
               >
                 <Box display="inline-flex" mr="8px" cursor="pointer">
                   <svg
