@@ -3,7 +3,11 @@ import { Box, Text, HStack } from "@chakra-ui/react";
 import TabNavItem from "./TabNavItem";
 import MyTaskInput from "./MyTaskInput";
 import { MyTaskList } from ".";
+import { useAppSelector, useAppDispatch } from "../../hooks";
+import { tabUpcoming, tabDue, tabCompleted } from "../../store/ui/HomeSlice";
 export default function BaseCard() {
+  const { tabmenu } = useAppSelector((state) => state.Home);
+  const dispatch = useAppDispatch();
   return (
     <Box
       mb="16px"
@@ -51,9 +55,21 @@ export default function BaseCard() {
             </Box>
             {/* TabNavigationbar */}
             <HStack>
-              <TabNavItem title="Upcoming" selected={true} />
-              <TabNavItem title="Overdue" selected={false} />
-              <TabNavItem title="Completed" selected={false} />
+              <TabNavItem
+                onClick={() => dispatch(tabUpcoming())}
+                title="Upcoming"
+                selected={tabmenu === "upcoming"}
+              />
+              <TabNavItem
+                onClick={() => dispatch(tabDue())}
+                title="Overdue"
+                selected={tabmenu === "due"}
+              />
+              <TabNavItem
+                onClick={() => dispatch(tabCompleted())}
+                title="Completed"
+                selected={tabmenu === "completed"}
+              />
             </HStack>
           </Box>
         </Box>

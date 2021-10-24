@@ -3,6 +3,7 @@ import { Text } from "@chakra-ui/react";
 interface Props {
   selected: boolean;
   title: string;
+  onClick: () => void;
 }
 export default function TabNavItem(props: Props) {
   return (
@@ -17,6 +18,7 @@ export default function TabNavItem(props: Props) {
       _selected={{ borderBottomColor: "rgb(109,110,111)" }}
       aria-selected={props.selected}
       borderColor="white"
+      onClick={props.onClick}
     >
       {props.title}
     </Text>
