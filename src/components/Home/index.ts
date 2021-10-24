@@ -5,3 +5,4 @@ export { default as BaseCard } from "./BaseCard";
 export { default as ProjectWidget } from "./ProjectWidget";
 export { default as PeopleWidget } from "./PeopleWidget";
 export { default as MyTaskList } from "./MyTaskList";
+export { default as CompletedTaskList } from "./CompletedTasks";

@@ -1,10 +1,18 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Spinner } from "@chakra-ui/react";
 import { useAppSelector, useAppDispatch } from "../../hooks";
 import { taskCompleted } from "../../store/Project/TaskSlice";
+import { CompletedTaskList } from ".";
 function MyTaskList() {
   const Tasks = useAppSelector((state) => state.Tasks);
+  const [isLoading, setIsLoading] = React.useState(true);
+  const { tabmenu } = useAppSelector((state) => state.Home);
   const dispatch = useAppDispatch();
+  const UnCompletedTasks = Tasks.filter((task) => task.completed === false);
+  React.useEffect(() => {
+    setIsLoading(false);
+  }, []);
+  if (isLoading) return <Spinner />;
   return (
     <Box
       flexGrow={1}
@@ -14,8 +22,10 @@ function MyTaskList() {
       overflowY="auto"
       display="block"
     >
-      {Tasks &&
-        Tasks.map((task) => {
+      {tabmenu === "completed" ? (
+        <CompletedTaskList />
+      ) : (
+        UnCompletedTasks.map((task) => {
           return (
             <Box
               display="flex"
@@ -63,7 +73,8 @@ function MyTaskList() {
               </Box>
             </Box>
           );
-        })}
+        })
+      )}
     </Box>
   );
 }

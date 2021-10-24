@@ -11,6 +11,7 @@ export default function MyTaskInput() {
     if (e.code === "Enter") {
       e.preventDefault();
       dispatch(addTask(task));
+      setTask("");
     }
   };
   return (
@@ -48,6 +49,7 @@ export default function MyTaskInput() {
           placeholder="Don’t forget it. Task it!"
           onKeyUp={(e) => handleAddTask(e)}
           onChange={(e) => setTask(e.target.value)}
+          value={task}
         />
       </Box>
     </Box>
