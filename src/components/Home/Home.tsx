@@ -18,7 +18,7 @@ function Home() {
       flexDirection="column"
       minW="920px"
     >
-      <Box w="100%">
+      <Box position="relative" w="100%">
         <Topbar />
         <Box
           display="flex"

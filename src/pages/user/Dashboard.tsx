@@ -24,6 +24,8 @@ function Dashboard() {
           minH="1px"
           flexGrow={1}
           flexShrink={1}
+          overflow="hidden"
+          position="relative"
         >
           <Sidebar />
           <Box overflowY="scroll" w="100%" maxH="100vh">

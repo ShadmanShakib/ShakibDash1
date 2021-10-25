@@ -14,7 +14,8 @@ function Topbar() {
       w="100%"
       position="fixed"
       minH="72px"
-      px="24px"
+      pl="24px"
+      pr={expanded ? "264px" : "24px"}
       zIndex={200}
       display="flex"
       alignItems="center"
@@ -68,7 +69,7 @@ function Topbar() {
           variant="unstyled"
           w="140px"
           h="32px"
-          borderWidth="1px"
+          border="1px solid"
           borderColor="#cbd4db"
           pr="16px"
           pl="32px"
