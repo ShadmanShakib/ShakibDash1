@@ -1,11 +1,18 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
 import { Home, Goals, Portfolios, Inbox, MyTask, Reporting } from "../../icons";
+import { useLocation } from "react-router-dom";
 import MenuItem from "./MenuItem";
+
 function Menu() {
+  const location = useLocation();
   return (
     <Box mb="16px">
-      <MenuItem text="Home" icon={<Home />} />
+      <MenuItem
+        isSelected={location.pathname === "/"}
+        text="Home"
+        icon={<Home />}
+      />
       <MenuItem
         text="My Tasks"
         icon={<MyTask height="20" width="20" fill="#cbd4db" />}

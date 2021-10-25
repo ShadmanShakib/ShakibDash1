@@ -1,12 +1,16 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
+
 interface Props {
   text: string;
   icon: any;
+  isSelected?: boolean;
 }
 function MenuItem(props: Props) {
   return (
     <Box
+      aria-selected={props.isSelected}
+      _selected={{ bgColor: "rgba(255,255,255,.2)" }}
       cursor="pointer"
       display="flex"
       alignItems="center"
