@@ -9,24 +9,29 @@ function Menu() {
   return (
     <Box mb="16px">
       <MenuItem
+        href="/"
         isSelected={location.pathname === "/"}
         text="Home"
         icon={<Home />}
       />
       <MenuItem
+        href="/mytask"
         text="My Tasks"
         icon={<MyTask height="20" width="20" fill="#cbd4db" />}
       />
-      <MenuItem text="Inbox" icon={<Inbox fill="#cbd4db" />} />
+      <MenuItem href="/inbox" text="Inbox" icon={<Inbox fill="#cbd4db" />} />
       <MenuItem
+        href="/reporting"
         text="Reporting"
         icon={<Reporting height="20" width="20" fill="#cbd4db" />}
       />
       <MenuItem
+        href="/portfolio"
         text="Portfolios"
         icon={<Portfolios height="20" width="20" fill="#cbd4db" />}
       />
       <MenuItem
+        href="/goals"
         text="Goals"
         icon={<Goals height="20" width="20" fill="#cbd4db" />}
       />
