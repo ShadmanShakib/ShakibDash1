@@ -8,7 +8,7 @@ function Home() {
   return (
     <Box
       bgSize="cover"
-      backgroundImage="url(https://d3ki9tyy5l5ruj.cloudfront.net/obj/855322c87bfcb2eab595159675ffa2d5d46b67e0/forest_home_background.png)"
+      backgroundImage="url(https://d3ki9tyy5l5ruj.cloudfront.net/obj/b18a6d6d4b5938c3625dc87034a6effc2ca2de55/Forest_background_dark.png)"
       display="flex"
       flexGrow={1}
       flexShrink={1}

@@ -16,6 +16,7 @@ function Menu() {
       />
       <MenuItem
         href="/mytask"
+        isSelected={location.pathname === "/mytask"}
         text="My Tasks"
         icon={<MyTask height="20" width="20" fill="#cbd4db" />}
       />

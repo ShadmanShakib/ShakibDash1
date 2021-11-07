@@ -12,11 +12,14 @@ function Topbar() {
       boxSizing="border-box"
       flexShrink={0}
       zIndex={200}
+      borderBottom="1px solid"
+      borderColor="brand.weak"
+      bg="#1e1f21"
     >
       <Box display="flex">
         <Box display="flex" flexDir="column" minH="72px" maxW="100%">
           <Box display="flex" alignItems="center">
-            <Box fontSize="20px" mr="6px" lineHeight="28px">
+            <Box color="white" fontSize="20px" mr="6px" lineHeight="28px">
               My&nbsp;Tasks
             </Box>
             <Box
@@ -37,10 +40,18 @@ function Topbar() {
           </Box>
           <Box>
             <Box display="flex">
-              <Box display="">List</Box>
-              <Box ml="24px">Board</Box>
-              <Box ml="24px">Calendar</Box>
-              <Box ml="24px">Files</Box>
+              <Box color="white" display="">
+                List
+              </Box>
+              <Box color="#a2a0a2" ml="24px">
+                Board
+              </Box>
+              <Box color="#a2a0a2" ml="24px">
+                Calendar
+              </Box>
+              <Box color="brand.weak" ml="24px">
+                Files
+              </Box>
             </Box>
           </Box>
         </Box>
