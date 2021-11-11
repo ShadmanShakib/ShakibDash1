@@ -22,6 +22,7 @@ function Menu() {
       />
       <MenuItem href="/inbox" text="Inbox" icon={<Inbox fill="#cbd4db" />} />
       <MenuItem
+        isSelected={location.pathname === "/reporting"}
         href="/reporting"
         text="Reporting"
         icon={<Reporting height="20" width="20" fill="#cbd4db" />}

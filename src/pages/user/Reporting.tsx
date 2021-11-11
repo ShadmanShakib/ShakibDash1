@@ -5,17 +5,14 @@ import { useGetExRateQuery } from "../../services/CryptoApi";
 import Charts from "react-apexcharts";
 function Reporting() {
   const { data, isLoading, error } = useGetExRateQuery("BTC");
-  const rate: string[] = React.useMemo(() => [], []);
-
-  React.useEffect(() => {
-    data?.forEach((item) => rate.push(item.rate));
-  }, [data, rate]);
   const ChartData = {
     series: [
       {
         type: "line",
         name: "Series 1",
-        data: rate,
+        data: data?.map((item: any) => {
+          return item["rate"];
+        }),
       },
     ],
 
@@ -24,7 +21,9 @@ function Reporting() {
       id: "1",
 
       xaxis: {
-        categories: [],
+        categories: data?.map((item: any) => {
+          return item["date"];
+        }),
       },
 
       // annotations
@@ -51,19 +50,21 @@ function Reporting() {
       },
     },
   };
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error...</div>;
-  if (!data) return <div>No data...</div>;
 
   return (
     <Box display="flex" minH="100vh">
       <Sidebar />
-      <Charts
-        options={ChartData.options}
-        series={ChartData.series}
-        type="line"
-      />
-      <button onClick={() => console.log(rate)}>Click</button>
+      {isLoading ? (
+        <Box> Loading...</Box>
+      ) : (
+        <Charts
+          height={700}
+          width={700}
+          options={ChartData.options}
+          series={ChartData.series}
+          type="line"
+        />
+      )}
     </Box>
   );
 }

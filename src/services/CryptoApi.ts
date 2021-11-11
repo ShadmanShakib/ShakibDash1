@@ -8,12 +8,12 @@ interface ExchangeRate {
 export const cryptoApi = createApi({
   reducerPath: "cryptoApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://api.nomics.com/v1/",
+    baseUrl: `${process.env.REACT_APP_BASE_URL}`,
   }),
   endpoints: (builder) => ({
     getExRate: builder.query<ExchangeRate[], string>({
       query: (currency) =>
-        `exchange-rates/history?key=${process.env.REACT_APP_API_KEY}&currency=${currency}&start=2021-10-14T00%3A00%3A00Z&end=2021-11-6T00%3A00%3A00Z`,
+        `exchange-rates/history?key=${process.env.REACT_APP_API_KEY}&currency=${currency}&start=2021-10-30T00%3A00%3A00Z&end=2021-11-6T00%3A00%3A00Z`,
     }),
   }),
 });
