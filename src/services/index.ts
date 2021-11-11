@@ -1,1 +1,1 @@
-export { cryptoApi } from "./CryptoApi";
+export { cryptoApi, useGetCurrenciesQuery } from "./CryptoApi";

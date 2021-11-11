@@ -11,6 +11,10 @@ export const cryptoApi = createApi({
     baseUrl: `${process.env.REACT_APP_BASE_URL}`,
   }),
   endpoints: (builder) => ({
+    getCurrencies: builder.query({
+      query: (currency) =>
+        `currencies/ticker?key=${process.env.REACT_APP_API_KEY}&ids=BTC&interval=1d`,
+    }),
     getExRate: builder.query<ExchangeRate[], string>({
       query: (currency) =>
         `exchange-rates/history?key=${process.env.REACT_APP_API_KEY}&currency=${currency}&start=2021-10-30T00%3A00%3A00Z&end=2021-11-6T00%3A00%3A00Z`,
@@ -20,4 +24,4 @@ export const cryptoApi = createApi({
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetExRateQuery } = cryptoApi;
+export const { useGetExRateQuery, useGetCurrenciesQuery } = cryptoApi;
