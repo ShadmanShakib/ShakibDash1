@@ -13,7 +13,7 @@ export const cryptoApi = createApi({
   endpoints: (builder) => ({
     getCurrencies: builder.query({
       query: (currency) =>
-        `currencies/ticker?key=${process.env.REACT_APP_API_KEY}&ids=BTC&interval=1d`,
+        `currencies/ticker?key=${process.env.REACT_APP_API_KEY}&ids=BTC,ETH,XRP&interval=1d`,
     }),
     getExRate: builder.query<ExchangeRate[], string>({
       query: (currency) =>
