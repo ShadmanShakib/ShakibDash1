@@ -1,4 +1,14 @@
+interface OneDay {
+  market_cap_change: string;
+  market_cap_change_pct: string;
+  price_change: string;
+  price_change_pct: string;
+  volume: string;
+  volume_change: string;
+  volume_change_pct: string;
+}
 export interface CurrencyDataType {
+  "1d": OneDay;
   circulating_supply: string;
   currency: string;
   first_candle: string;
