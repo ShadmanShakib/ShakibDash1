@@ -1,16 +1,14 @@
 import React from "react";
-import { Box, Image, Text } from "@chakra-ui/react";
+import { Box, Image, Text, Grid } from "@chakra-ui/react";
 import { useGetMarketQuery } from "../../services/Crypto";
 function CurrencyDetails() {
   const { data, isLoading, error } = useGetMarketQuery("");
-  React.useEffect(() => {
-    console.log(data);
-  }, []);
+
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error...</div>;
   if (!data) return <div>No data...</div>;
   return (
-    <Box>
+    <Grid templateColumns="repeat(5, 1fr)" gap={5}>
       {data.map((item) => {
         return (
           <Box key={item.id}>
@@ -20,7 +18,7 @@ function CurrencyDetails() {
           </Box>
         );
       })}
-    </Box>
+    </Grid>
   );
 }
 
