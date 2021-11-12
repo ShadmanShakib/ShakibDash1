@@ -1,12 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { postApi } from "../services/PostApi";
 import authReducer from "./Auth/AuthSlice";
 import { Sidebar, Home } from "./ui";
 import { Tasks } from "./Project";
 import { CoingeckoApi } from "../services/Crypto";
 export const store = configureStore({
   reducer: {
-    [postApi.reducerPath]: postApi.reducer,
     [CoingeckoApi.reducerPath]: CoingeckoApi.reducer,
 
     auth: authReducer,
@@ -15,7 +13,7 @@ export const store = configureStore({
     Home,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(postApi.middleware, CoingeckoApi.middleware),
+    getDefaultMiddleware().concat(CoingeckoApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
