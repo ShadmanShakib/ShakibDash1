@@ -4,6 +4,13 @@ import { useGetCurrenciesQuery } from "../../services";
 import { CurrencyDataType } from "./type";
 function CurrencyDetails() {
   const { data, error, isLoading } = useGetCurrenciesQuery("");
+  React.useEffect(() => {
+    fetch(
+      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
+    )
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }, []);
 
   if (isLoading) return <div>Loading...</div>;
   if (error) return <div>Error...</div>;
@@ -12,6 +19,7 @@ function CurrencyDetails() {
       {data.map((currency: CurrencyDataType) => {
         const p = Number(currency.price);
         const price = p.toFixed(2);
+        const price_change = Number(currency["1d"].price_change).toFixed(2);
         return (
           <Box
             mr="8"
@@ -32,8 +40,8 @@ function CurrencyDetails() {
             />
             <Box>
               <Text color="white">Price: $ {price}</Text>
-              <Text color="white">
-                Change: $ {Number(currency["1d"].price_change).toFixed(2)}
+              <Text color={Number(price_change) > 0 ? "red.500" : "white"}>
+                Change: $ {price_change}
               </Text>
             </Box>
           </Box>
