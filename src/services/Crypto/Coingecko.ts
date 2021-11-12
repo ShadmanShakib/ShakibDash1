@@ -5,7 +5,7 @@ import type { markets } from "./types";
 export const CoingeckoApi = createApi({
   reducerPath: "cryptoApi",
   baseQuery: fetchBaseQuery({
-    baseUrl: `${process.env.REACT_APP_BASE_URL}`,
+    baseUrl: "https://api.coingecko.com/api/v3",
   }),
   endpoints: (builder) => ({
     getMarket: builder.query<markets[], string>({
