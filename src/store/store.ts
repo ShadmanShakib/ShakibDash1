@@ -3,18 +3,19 @@ import { postApi } from "../services/PostApi";
 import authReducer from "./Auth/AuthSlice";
 import { Sidebar, Home } from "./ui";
 import { Tasks } from "./Project";
-import { cryptoApi } from "../services";
+import { CoingeckoApi } from "../services/Crypto";
 export const store = configureStore({
   reducer: {
     [postApi.reducerPath]: postApi.reducer,
-    [cryptoApi.reducerPath]: cryptoApi.reducer,
+    [CoingeckoApi.reducerPath]: CoingeckoApi.reducer,
+
     auth: authReducer,
     Sidebar,
     Tasks,
     Home,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(postApi.middleware, cryptoApi.middleware),
+    getDefaultMiddleware().concat(postApi.middleware, CoingeckoApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
