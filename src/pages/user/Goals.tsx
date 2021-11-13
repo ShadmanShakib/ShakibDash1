@@ -1,16 +1,10 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
+import { Sidebar } from "../../components/common";
 function Goals() {
-  const [goals, setGoals] = React.useState([]);
-
-  const handleClick = () => {
-    setGoals([...goals]);
-  };
-
   return (
     <Box>
-      Goals
-      <Box onClick={handleClick}></Box>
+      <Sidebar />
     </Box>
   );
 }
