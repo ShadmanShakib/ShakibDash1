@@ -17,9 +17,9 @@ function Reporting() {
       bg="#1e1f21"
     >
       <Sidebar />
-      <Box bg="#1e1f21" w="full">
+      <Box overflowY="auto" bg="#1e1f21" w="full">
         <Header />
-        <Box mt="8" ml="8">
+        <Box mt="8" mx="8" pb="8">
           <CurrencyDetails />
         </Box>
       </Box>
