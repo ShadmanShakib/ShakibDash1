@@ -20,7 +20,12 @@ function Menu() {
         text="My Tasks"
         icon={<MyTask height="20" width="20" fill="#cbd4db" />}
       />
-      <MenuItem href="/inbox" text="Inbox" icon={<Inbox fill="#cbd4db" />} />
+      <MenuItem
+        isSelected={location.pathname === "/inbox"}
+        href="/inbox"
+        text="Inbox"
+        icon={<Inbox fill="#cbd4db" />}
+      />
       <MenuItem
         isSelected={location.pathname === "/reporting"}
         href="/reporting"
@@ -28,6 +33,7 @@ function Menu() {
         icon={<Reporting height="20" width="20" fill="#cbd4db" />}
       />
       <MenuItem
+        isSelected={location.pathname === "/portfolio"}
         href="/portfolio"
         text="Portfolios"
         icon={<Portfolios height="20" width="20" fill="#cbd4db" />}
@@ -35,6 +41,7 @@ function Menu() {
       <MenuItem
         href="/goals"
         text="Goals"
+        isSelected={location.pathname === "/goals"}
         icon={<Goals height="20" width="20" fill="#cbd4db" />}
       />
     </Box>
