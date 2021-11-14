@@ -2,6 +2,7 @@ import React from "react";
 import { Sidebar } from "../../components/common";
 import { Box } from "@chakra-ui/react";
 import { Currency } from "../../components/Charts";
+import { Header } from "../../components/Reporting";
 function Portfolio() {
   return (
     <Box
@@ -17,6 +18,7 @@ function Portfolio() {
     >
       <Sidebar />
       <Box w="full" overflowY="auto">
+        <Header title="Charts" />
         <Currency />
       </Box>
     </Box>

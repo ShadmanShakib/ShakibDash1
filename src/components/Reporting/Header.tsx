@@ -1,6 +1,9 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/react";
-function Header() {
+interface Props {
+  title: string;
+}
+function Header(props: Props) {
   return (
     <Box
       display="flex"
@@ -13,7 +16,7 @@ function Header() {
       borderBottomColor="gray.200"
     >
       <Text fontSize="xl" color="white" fontWeight="bold">
-        Reporting
+        {props.title}
       </Text>
     </Box>
   );

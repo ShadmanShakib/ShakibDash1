@@ -8,14 +8,11 @@ function Currency() {
     chart: {
       id: "basic-bar",
     },
-    xaxis: {
-      categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999],
-    },
   };
   const series = [
     {
       name: "series-1",
-      data: data?.prices.map((price) => price[1]),
+      data: data?.prices.map((price) => price[1].toFixed(2)),
     },
   ];
 
@@ -23,7 +20,7 @@ function Currency() {
   if (error) return <div>Error!</div>;
   return (
     <Box color="white">
-      <Charts series={series} options={options} />
+      <Charts width="800" series={series} options={options} />
     </Box>
   );
 }

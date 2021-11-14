@@ -1,6 +1,7 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import { Sidebar } from "../../components/common";
+import { Sidebar, Header } from "../../components/common";
+
 function Goals() {
   return (
     <Box
@@ -15,6 +16,9 @@ function Goals() {
       bg="#1e1f21"
     >
       <Sidebar />
+      <Box w="full">
+        <Header title="Goals" />
+      </Box>
     </Box>
   );
 }

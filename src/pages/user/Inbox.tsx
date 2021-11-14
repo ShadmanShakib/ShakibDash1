@@ -1,6 +1,6 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-import { Sidebar } from "../../components/common";
+import { Header, Sidebar } from "../../components/common";
 function Inbox() {
   return (
     <Box
@@ -15,6 +15,9 @@ function Inbox() {
       bg="#1e1f21"
     >
       <Sidebar />
+      <Box w="full">
+        <Header title="Inbox" />
+      </Box>
     </Box>
   );
 }
