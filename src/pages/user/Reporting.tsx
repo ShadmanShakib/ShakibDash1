@@ -18,7 +18,7 @@ function Reporting() {
     >
       <Sidebar />
       <Box overflowY="auto" bg="#1e1f21" w="full">
-        <Header />
+        <Header title="Price" />
         <Box mt="8" mx="8" pb="8">
           <CurrencyDetails />
         </Box>
