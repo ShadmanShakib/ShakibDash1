@@ -5,6 +5,7 @@ Visit: https://shakibdash1.netlify.app/
 - React JS
 - Redux/ Redux Toolkit
 - Chakra UI
+- Apex Charts
 
 ### API
 - RTK Query have been used to fetch data 
