@@ -26,3 +26,9 @@ export interface markets {
   total_supply: number;
   total_volume: number;
 }
+
+export interface markets_charts {
+  market_cap: number[];
+  prices: [[number, number]];
+  total_volume: number[];
+}

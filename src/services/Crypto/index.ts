@@ -1,1 +1,5 @@
-export { useGetMarketQuery, CoingeckoApi } from "./Coingecko";
+export {
+  useGetMarketQuery,
+  CoingeckoApi,
+  useGetMarketChartQuery,
+} from "./Coingecko";
