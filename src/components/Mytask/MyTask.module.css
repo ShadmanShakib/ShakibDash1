@@ -1,0 +1,17 @@
+.SpreadsheetGridHeaderStructure {
+  background-color: #1e1f21;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  height: 37px;
+  position: relative;
+}
+.SpreadsheetGridHeaderStructureleft {
+  align-items: stretch;
+  background-color: #1e1f21;
+  display: flex;
+  flex-direction: column;
+  height: 37px;
+  left: 0;
+  position: absolute;
+  z-index: 100;
+}
