@@ -65,7 +65,7 @@ function Topbar() {
                 aria-selected={selectSelectedTaskId === "board"}
                 _selected={{ fontWeight: "bold", color: "white" }}
                 onClick={() => handleClick("board")}
-                color="barnd.weak"
+                color="brand.weak"
                 ml="24px"
               >
                 Board
