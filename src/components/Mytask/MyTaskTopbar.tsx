@@ -8,9 +8,6 @@ function Topbar() {
   const selectSelectedTaskId = useAppSelector(
     (state) => state.myTask.selectedTaskId
   );
-  React.useEffect(() => {
-    console.log(selectSelectedTaskId);
-  }, []);
 
   const handleClick = (id: id) => {
     dispatch(setSelectedTaskId(id));
@@ -56,36 +53,35 @@ function Topbar() {
             <Box display="flex">
               <Box
                 aria-selected={selectSelectedTaskId === "list"}
-                _selected={{ fontWeight: "bold" }}
-                color="white"
-                display=""
+                _selected={{ fontWeight: "bold", color: "white" }}
                 onClick={() => {
                   dispatch(setSelectedTaskId("list"));
                 }}
+                color="brand.weak"
               >
                 List
               </Box>
               <Box
                 aria-selected={selectSelectedTaskId === "board"}
-                _selected={{ fontWeight: "bold" }}
+                _selected={{ fontWeight: "bold", color: "white" }}
                 onClick={() => handleClick("board")}
-                color="#a2a0a2"
+                color="barnd.weak"
                 ml="24px"
               >
                 Board
               </Box>
               <Box
                 aria-selected={selectSelectedTaskId === "calendar"}
-                _selected={{ fontWeight: "bold" }}
+                _selected={{ fontWeight: "bold", color: "white" }}
                 onClick={() => handleClick("calendar")}
-                color="#a2a0a2"
+                color="brand.weak"
                 ml="24px"
               >
                 Calendar
               </Box>
               <Box
                 aria-selected={selectSelectedTaskId === "file"}
-                _selected={{ fontWeight: "bold" }}
+                _selected={{ fontWeight: "bold", color: "white" }}
                 onClick={() => handleClick("file")}
                 color="brand.weak"
                 ml="24px"
