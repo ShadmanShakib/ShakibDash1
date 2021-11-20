@@ -1,7 +1,20 @@
 import React from "react";
 import { Box } from "@chakra-ui/react";
-
+import { useAppDispatch, useAppSelector } from "../../hooks/useApp";
+import { setSelectedTaskId } from "../../store/ui/MyTaskSlice";
+type id = "list" | "board" | "calendar" | "file";
 function Topbar() {
+  const dispatch = useAppDispatch();
+  const selectSelectedTaskId = useAppSelector(
+    (state) => state.myTask.selectedTaskId
+  );
+  React.useEffect(() => {
+    console.log(selectSelectedTaskId);
+  }, []);
+
+  const handleClick = (id: id) => {
+    dispatch(setSelectedTaskId(id));
+  };
   return (
     <Box
       minH="72px"
@@ -33,6 +46,7 @@ function Topbar() {
                 width="16px"
                 focusable="false"
                 viewBox="0 0 32 32"
+                fill="white"
               >
                 <path d="M16,22.5c-0.3,0-0.7-0.1-0.9-0.3l-11-9c-0.6-0.5-0.7-1.5-0.2-2.1s1.5-0.7,2.1-0.2l10,8.2l10-8.2c0.6-0.5,1.6-0.4,2.1,0.2c0.5,0.6,0.4,1.6-0.2,2.1l-11,9C16.7,22.4,16.3,22.5,16,22.5z"></path>
               </svg>
@@ -40,16 +54,42 @@ function Topbar() {
           </Box>
           <Box>
             <Box display="flex">
-              <Box color="white" display="">
+              <Box
+                aria-selected={selectSelectedTaskId === "list"}
+                _selected={{ fontWeight: "bold" }}
+                color="white"
+                display=""
+                onClick={() => {
+                  dispatch(setSelectedTaskId("list"));
+                }}
+              >
                 List
               </Box>
-              <Box color="#a2a0a2" ml="24px">
+              <Box
+                aria-selected={selectSelectedTaskId === "board"}
+                _selected={{ fontWeight: "bold" }}
+                onClick={() => handleClick("board")}
+                color="#a2a0a2"
+                ml="24px"
+              >
                 Board
               </Box>
-              <Box color="#a2a0a2" ml="24px">
+              <Box
+                aria-selected={selectSelectedTaskId === "calendar"}
+                _selected={{ fontWeight: "bold" }}
+                onClick={() => handleClick("calendar")}
+                color="#a2a0a2"
+                ml="24px"
+              >
                 Calendar
               </Box>
-              <Box color="brand.weak" ml="24px">
+              <Box
+                aria-selected={selectSelectedTaskId === "file"}
+                _selected={{ fontWeight: "bold" }}
+                onClick={() => handleClick("file")}
+                color="brand.weak"
+                ml="24px"
+              >
                 Files
               </Box>
             </Box>

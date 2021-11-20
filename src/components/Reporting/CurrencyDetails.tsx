@@ -9,7 +9,6 @@ function CurrencyDetails() {
   if (!data)
     return (
       <Box color="white">
-        {" "}
         <Text>No data...</Text>
       </Box>
     );

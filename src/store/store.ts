@@ -1,6 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import authReducer from "./Auth/AuthSlice";
-import { Sidebar, Home } from "./ui";
+import { Sidebar, Home, myTask } from "./ui";
 import { Tasks } from "./Project";
 import { CoingeckoApi } from "../services/Crypto";
 export const store = configureStore({
@@ -11,6 +11,7 @@ export const store = configureStore({
     Sidebar,
     Tasks,
     Home,
+    myTask,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(CoingeckoApi.middleware),
