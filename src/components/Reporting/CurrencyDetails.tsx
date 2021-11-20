@@ -4,9 +4,14 @@ import { useGetMarketQuery } from "../../services/Crypto";
 function CurrencyDetails() {
   const { data, isLoading, error } = useGetMarketQuery("");
 
-  if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>Error...</div>;
-  if (!data) return <div>No data...</div>;
+  if (isLoading) return <Box color="gray.300">Loading...</Box>;
+  if (error) return <Box color="white">Error...</Box>;
+  if (!data)
+    return (
+      <Box color="white">
+        <Text>No data...</Text>
+      </Box>
+    );
   return (
     <Grid templateColumns="repeat(3, 1fr)" gap={5}>
       {data.map((item) => {
