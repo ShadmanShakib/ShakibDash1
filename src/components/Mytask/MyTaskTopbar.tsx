@@ -27,8 +27,8 @@ function Topbar() {
       <Box display="flex">
         <Box display="flex" alignItems="center" minH="72px" maxW="100%">
           <Image
-            h="16"
-            w="16"
+            h="14"
+            w="14"
             borderRadius="50%"
             src="https://avatars.githubusercontent.com/u/72305492?s=96&v=4"
           />

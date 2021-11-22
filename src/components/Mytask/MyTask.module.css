@@ -4,13 +4,18 @@
   flex: 0 0 auto;
   height: 37px;
   position: relative;
+  border-top: 1px solid #a2a0a2;
+  border-bottom: 1px solid #a2a0a2;
+  display: flex;
+  align-items: center;
 }
 .SpreadsheetGridHeaderStructureleft {
   align-items: stretch;
   background-color: #1e1f21;
   display: flex;
   flex-direction: column;
-  height: 37px;
+  border-right: 1px solid #a2a0a2;
+
   left: 0;
   position: absolute;
   z-index: 100;
