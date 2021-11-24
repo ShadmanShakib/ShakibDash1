@@ -21,7 +21,7 @@ function DragableItem() {
         color: "white",
       }}
     >
-      ♘
+      Task 1
     </div>
   );
 }

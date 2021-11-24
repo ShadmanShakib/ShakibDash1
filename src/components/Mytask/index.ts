@@ -5,3 +5,5 @@ export { default as BodyHeader } from "./BodyHeader";
 export { default as TaskGroupHeader } from "./TaskGroupHeader";
 export { default as FilesView } from "./FilesView";
 export { default as BoardView } from "./BoardView";
+export { default as DraggableTask } from "./DragableItem";
+export { default as BoardGrid } from "./BoardGrid";
