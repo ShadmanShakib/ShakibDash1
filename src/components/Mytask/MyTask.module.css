@@ -12,11 +12,18 @@
 .SpreadsheetGridHeaderStructureleft {
   align-items: stretch;
   background-color: #1e1f21;
+  height: 37px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid #a2a0a2;
-
+  border-bottom: 1px solid #a2a0a2;
+  border-top: 1px solid #a2a0a2;
+  align-self: center;
   left: 0;
   position: absolute;
   z-index: 100;
+}
+.svg :hover {
+  cursor: pointer;
+  transform: rotateY(90deg);
 }
