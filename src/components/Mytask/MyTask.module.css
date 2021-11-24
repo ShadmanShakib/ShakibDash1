@@ -23,7 +23,10 @@
   position: absolute;
   z-index: 100;
 }
-.svg :hover {
+.svg {
   cursor: pointer;
-  transform: rotateY(90deg);
+  overflow: hidden;
+}
+.expand {
+  transform: rotate3d(0, 0, 1, 90deg);
 }

@@ -1,6 +1,6 @@
 import React from "react";
-
-import { Box, Text } from "@chakra-ui/react";
+import { TaskGroupHeader } from ".";
+import { Box } from "@chakra-ui/react";
 import s from "./MyTask.module.css";
 
 function ListView() {
@@ -59,21 +59,7 @@ function ListView() {
       </Box>
 
       <Box>
-        <Box display="flex" alignItems="center">
-          <svg
-            className={s.svg}
-            height="16px"
-            width="16px"
-            fill="#a2a0a2"
-            focusable="false"
-            viewBox="0 0 32 32"
-          >
-            <path d="M13.707,6.707L23,16l-9.293,9.293C13.077,25.923,12,25.477,12,24.586V7.414C12,6.523,13.077,6.077,13.707,6.707z"></path>
-          </svg>
-          <Text color="white" fontWeight="semibold">
-            Recently assigned
-          </Text>
-        </Box>
+        <TaskGroupHeader title="Task Group 1" />
       </Box>
     </Box>
   );
