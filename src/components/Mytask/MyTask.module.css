@@ -4,14 +4,29 @@
   flex: 0 0 auto;
   height: 37px;
   position: relative;
+  border-top: 1px solid #a2a0a2;
+  border-bottom: 1px solid #a2a0a2;
+  display: flex;
+  align-items: center;
 }
 .SpreadsheetGridHeaderStructureleft {
   align-items: stretch;
   background-color: #1e1f21;
+  height: 37px;
   display: flex;
   flex-direction: column;
-  height: 37px;
+  border-right: 1px solid #a2a0a2;
+  border-bottom: 1px solid #a2a0a2;
+  border-top: 1px solid #a2a0a2;
+  align-self: center;
   left: 0;
   position: absolute;
   z-index: 100;
+}
+.svg {
+  cursor: pointer;
+  overflow: hidden;
+}
+.expand {
+  transform: rotate3d(0, 0, 1, 90deg);
 }

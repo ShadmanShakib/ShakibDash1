@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Input } from "@chakra-ui/react";
+import { Box, Input, Image } from "@chakra-ui/react";
 import { useAppSelector, useAppDispatch } from "../../../hooks/useApp";
 import { toggleSidebar } from "../../../store/ui/SidebarSlice";
 function Topbar() {
@@ -115,23 +115,19 @@ function Topbar() {
         </Box>
 
         <a
-          href="/#"
-          className="TopbarPageHeaderGlobalActions-settingsMenuButton DeprecatedAnchor"
+          href="https://github.com/shadmanshakib"
           aria-controls="lui_7"
           aria-expanded="false"
           id="lui_6"
         >
-          <Box
-            ml="12px"
-            h="28px"
-            w="28px"
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            bg="#14aaf5"
+          <Image
+            ml="4"
+            h="30px"
+            w="30px"
             borderRadius="50%"
-          >
-            <svg
+            src="https://avatars.githubusercontent.com/u/72305492?s=96&v=4"
+          />
+          {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               height="16px"
               width="16px"
@@ -145,8 +141,7 @@ function Topbar() {
                 strokeWidth="2"
                 d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
               />
-            </svg>
-          </Box>
+            </svg> */}
         </a>
       </Box>
     </Box>
