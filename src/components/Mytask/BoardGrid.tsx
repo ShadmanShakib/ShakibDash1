@@ -1,11 +1,14 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, SimpleGrid } from "@chakra-ui/react";
 import BoardColumn from "./BoardColumn";
 
 function BoardGrid() {
   return (
-    <Box display="grid" gridColumn={3}>
-      <BoardColumn title="To Do" />
+    <Box>
+      <SimpleGrid columns={3}>
+        <BoardColumn title="To Do" />
+        <BoardColumn title="Today" />
+      </SimpleGrid>
     </Box>
   );
 }
