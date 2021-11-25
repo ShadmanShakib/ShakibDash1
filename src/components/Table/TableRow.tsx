@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
 function TableRow() {
   return (
@@ -18,7 +18,9 @@ function TableRow() {
       borderColor="white"
       alignItems="center"
     >
-      <Box w="160px">Hello</Box>
+      <Box w="160px">
+        <Text color="white">Hello</Text>
+      </Box>
     </Box>
   );
 }
