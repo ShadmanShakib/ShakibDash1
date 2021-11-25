@@ -1,10 +1,9 @@
 import React from "react";
 import {} from "react-dnd";
-import { BoardGrid, DraggableTask } from ".";
+import { BoardGrid } from ".";
 function BoardView() {
   return (
     <div>
-      <DraggableTask />
       <BoardGrid />
     </div>
   );

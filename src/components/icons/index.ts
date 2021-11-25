@@ -4,5 +4,6 @@ import { ReactComponent as MyTask } from "./MyTaskIcon.svg";
 import { ReactComponent as Reporting } from "./Reporting.svg";
 import { ReactComponent as Goals } from "./Goals.svg";
 import { ReactComponent as Portfolios } from "./Portfolios.svg";
-
-export { Home, Inbox, MyTask, Reporting, Goals, Portfolios };
+import { ReactComponent as Plus } from "./Plus.svg";
+import ThreeDot from "./ThreeDot";
+export { Home, Inbox, MyTask, Reporting, Goals, Portfolios, Plus, ThreeDot };
